@@ -18,7 +18,8 @@ h1 {
 }
 
 /* HEADER, FOOTER STYLES */
-header, footer {
+header,
+footer {
   padding: 20px 0;
 }
 header {
@@ -38,7 +39,9 @@ footer .container {
   align-items: center;
   gap: 24px;
 }
-footer p, footer a, footer a img {
+footer p,
+footer a,
+footer a img {
   font-size: 20px;
   color: #fff;
   text-decoration: none;
@@ -50,7 +53,8 @@ footer a img {
   padding: 4px 8px;
   border-radius: 8px;
 }
-footer p:hover, footer a:hover {
+footer p:hover,
+footer a:hover {
   color: orange;
 }
 footer a img:hover {
@@ -62,6 +66,8 @@ footer a img:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
 }
 .camera-icon {
   color: orange;
@@ -93,7 +99,8 @@ footer a img:hover {
   cursor: pointer;
   transition: all 200ms;
 }
-#search-icon:hover, #search-icon:active {
+#search-icon:hover,
+#search-icon:active {
   color: orange;
 }
 
@@ -101,4 +108,52 @@ footer a img:hover {
 main {
   margin-top: 16px;
   margin-bottom: 16px;
+}
+.gallery {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+.picture {
+  width: 380px;
+  height: 214px;
+  margin-top: 15px;
+  background-position: center;
+  background-size: cover;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+/* RESPONSIVE STYLES */
+@media screen and (max-width: 1280px) {
+  .container {
+    padding: 0 16px;
+  }
+}
+
+@media screen and (max-width:768px) {
+  .picture {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 660px) {
+  h1 {
+    text-align: center;
+    font-size: 1.5rem;
+    width: 100%;
+  }
+  .header {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  footer .container {
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
