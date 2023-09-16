@@ -1,0 +1,104 @@
+/* BASIC STYLES */
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Comfortaa";
+  background-color: black;
+  color: white;
+  min-height: 100vh;
+}
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+h1 {
+  font-size: 2rem;
+}
+
+/* HEADER, FOOTER STYLES */
+header, footer {
+  padding: 20px 0;
+}
+header {
+  border-bottom: 8px solid orange;
+}
+footer {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  border-top: 8px solid orange;
+  display: flex;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+footer .container {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+footer p, footer a, footer a img {
+  font-size: 20px;
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 200ms;
+}
+footer a img {
+  height: 28px;
+  padding: 4px 8px;
+  border-radius: 8px;
+}
+footer p:hover, footer a:hover {
+  color: orange;
+}
+footer a img:hover {
+  background-color: orange;
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.camera-icon {
+  color: orange;
+}
+.search {
+  position: relative;
+  width: 350px;
+}
+#search-bar {
+  box-sizing: border-box;
+  width: 100%;
+  outline: none;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 24px;
+  transition: all 200ms;
+  font-size: 1rem;
+}
+#search-bar:focus {
+  outline: none;
+  box-shadow: orange 0px 0px 8px 0px;
+}
+#search-icon {
+  color: black;
+  position: absolute;
+  top: 25%;
+  right: 4%;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 200ms;
+}
+#search-icon:hover, #search-icon:active {
+  color: orange;
+}
+
+/* MAIN GALLERY */
+main {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
