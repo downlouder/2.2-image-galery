@@ -1,3 +1,9 @@
+:root {
+  --main: white;
+  --second: black;
+  --third: orange;
+}
+
 /* BASIC STYLES */
 * {
   margin: 0;
@@ -5,9 +11,11 @@
 }
 body {
   font-family: "Comfortaa";
-  background-color: black;
-  color: white;
+  background-color: var(--second);
+  color: var(--main);
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 .container {
   max-width: 1280px;
@@ -23,16 +31,15 @@ footer {
   padding: 20px 0;
 }
 header {
-  border-bottom: 8px solid orange;
+  border-bottom: 8px solid var(--third);
 }
 footer {
   width: 100%;
-  position: absolute;
-  bottom: 0;
-  border-top: 8px solid orange;
+  margin-top: auto;
+  border-top: 8px solid var(--third);
   display: flex;
   justify-content: center;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.15);
 }
 footer .container {
   display: flex;
@@ -43,7 +50,7 @@ footer p,
 footer a,
 footer a img {
   font-size: 20px;
-  color: #fff;
+  color: var(--main);
   text-decoration: none;
   cursor: pointer;
   transition: all 200ms;
@@ -55,10 +62,10 @@ footer a img {
 }
 footer p:hover,
 footer a:hover {
-  color: orange;
+  color: var(--third);
 }
 footer a img:hover {
-  background-color: orange;
+  background-color: var(--third);
 }
 
 /* HEADER */
@@ -70,7 +77,7 @@ footer a img:hover {
   gap: 16px;
 }
 .camera-icon {
-  color: orange;
+  color: var(--third);
 }
 .search {
   position: relative;
@@ -81,14 +88,14 @@ footer a img:hover {
   width: 100%;
   outline: none;
   padding: 8px 12px;
-  border: none;
+  border: 1px solid black;
   border-radius: 24px;
   transition: all 200ms;
   font-size: 1rem;
 }
 #search-bar:focus {
   outline: none;
-  box-shadow: orange 0px 0px 8px 0px;
+  box-shadow: var(--third) 0px 0px 12px 0px;
 }
 #search-icon {
   color: black;
@@ -101,7 +108,7 @@ footer a img:hover {
 }
 #search-icon:hover,
 #search-icon:active {
-  color: orange;
+  color: var(--third);
 }
 
 /* MAIN GALLERY */
@@ -115,15 +122,17 @@ main {
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: flex-start;
+  gap: 16px;
 }
 .picture {
+  box-sizing: border-box;
   width: 380px;
-  height: 214px;
-  margin-top: 15px;
+  height: 220px;
   background-position: center;
   background-size: cover;
-  border-radius: 2px;
+  border-radius: 4px;
   cursor: pointer;
+  border: 2px solid var(--main);
 }
 
 /* RESPONSIVE STYLES */
