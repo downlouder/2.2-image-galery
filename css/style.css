@@ -87,7 +87,7 @@ footer a img:hover {
   box-sizing: border-box;
   width: 100%;
   outline: none;
-  padding: 8px 12px;
+  padding: 8px 148px 8px 12px;
   border: 1px solid black;
   border-radius: 24px;
   transition: all 200ms;
@@ -109,6 +109,19 @@ footer a img:hover {
 #search-icon:hover,
 #search-icon:active {
   color: var(--third);
+}
+#season-suggestion {
+  color: black;
+  position: absolute;
+  top: 30%;
+  font-size: 0.8rem;
+  right: 12%;
+  cursor: pointer;
+  transition: all 200ms;
+}
+#season-suggestion:hover {
+  color: var(--third);
+  text-decoration: underline;
 }
 
 /* MAIN GALLERY */
