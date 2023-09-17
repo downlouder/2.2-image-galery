@@ -3,6 +3,7 @@ const gallery = document.getElementById("gallery");
 const searchInput = document.getElementById("search-bar");
 const searchIcon = document.getElementById("search-icon");
 const seasonBtn = document.getElementById("season-suggestion");
+const eraseBtn = document.getElementById('search-close');
 const arrayOfSeasons = ["winter", "spring", "summer", "autumn"];
 const url =
   "https://api.unsplash.com/photos?&per_page=30&client_id=588sChbD4XYfVMX6oxBTVOtqczMXoFRFt2eYmCEkglk";
@@ -53,6 +54,9 @@ function findImages(keyword) {
   const url = `https://api.unsplash.com/search/photos?&per_page=30&query=${keyword}&client_id=588sChbD4XYfVMX6oxBTVOtqczMXoFRFt2eYmCEkglk`;
   getFindingImages(url);
 }
+function eraseInput() {
+  searchInput.value = '';
+}
 
 // LISTENERS
 searchIcon.addEventListener("click", () => {
@@ -68,6 +72,8 @@ seasonBtn.addEventListener("click", () => {
   const url = `https://api.unsplash.com/search/photos?&per_page=30&query=${season}&client_id=588sChbD4XYfVMX6oxBTVOtqczMXoFRFt2eYmCEkglk`;
   getFindingImages(url);
 });
+eraseBtn.addEventListener('click', () => eraseInput())
 
+searchInput.focus();
 setColorPalette(date.getHours());
 getData(url);
