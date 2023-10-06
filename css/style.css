@@ -165,9 +165,9 @@ main {
   }
 }
 
-@media screen and (max-width:768px) {
-  .picture {
-    width: 100%;
+@media screen and (max-width:420px) {
+  #search-close {
+    right: 140px;
   }
 }
 
