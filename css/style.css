@@ -107,6 +107,7 @@ footer a img:hover {
   transition: all 200ms;
 }
 #search-close {
+  color: black;
   position: absolute;
   top: 26%;
   right: 42%;
